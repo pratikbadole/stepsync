@@ -50,8 +50,8 @@ body, html {
 
 /* Caption at bottom of polaroid */
 .caption {
-  padding-top: 15px;
-  font-size: 35px;
+  padding-top: 12px;
+  font-size: 30px;
   color: #389;
 }
 
