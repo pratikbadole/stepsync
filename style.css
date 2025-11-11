@@ -3,8 +3,11 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f089h0;
   height: 100%;
+  background-color: #023859; /* dark glowing blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Container holding the three sections */
@@ -12,8 +15,9 @@ body, html {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: space-between; /* evenly space the three cards */
+  justify-content: space-between;
   padding: 10px;
+  width: 100%;
 }
 
 /* Sections for positioning each card */
@@ -25,34 +29,50 @@ body, html {
   align-items: center;
 }
 
-/* Polaroid card style */
+/* Polaroid card style with glow */
 .polaroid {
-  background: white;
+  background: #54ACBF; /* teal */
   width: 150px;
-  height: 220px; /* increased height */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  height: 220px;
+  box-shadow:
+    0 0 10px rgba(84, 172, 191, 0.6),
+    0 0 20px rgba(84, 172, 191, 0.4),
+    0 10px 20px rgba(0,0,0,0.3); /* soft 3D + glow */
   border: 1px solid #ccc;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* image on top, caption at bottom */
+  justify-content: space-between;
   padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Polaroid hover effect for subtle 3D lift (optional) */
+.polaroid:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 20px rgba(84, 172, 191, 0.8),
+    0 0 30px rgba(84, 172, 191, 0.6),
+    0 15px 25px rgba(0,0,0,0.3);
 }
 
 /* Polaroid image */
 .polaroid img {
   width: 100%;
   height: auto;
-  flex-shrink: 0; /* keeps image from shrinking */
-  border-bottom: 1px solid #ccc;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 /* Caption at bottom of polaroid */
 .caption {
-  padding-top: 12px;
-  font-size: 30px;
-  color: #389;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #fff; /* better contrast on teal */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 /* Specific positions for cards */
