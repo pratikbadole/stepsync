@@ -1,1 +1,66 @@
+/* Mobile-first design */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between; /* equal vertical spacing */
+  padding: 10px;
+}
+
+/* Sections for positioning */
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Individual cards */
+.polaroid {
+  background: white;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+  position: relative;
+  text-align: center;
+}
+
+/* Polaroid image */
+.polaroid img {
+  width: 100%;
+  display: block;
+}
+
+/* Caption at the bottom of polaroid */
+.caption {
+  padding-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Top right card */
+.top-right {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Middle left card */
+.middle-left {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Bottom right card */
+.bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
